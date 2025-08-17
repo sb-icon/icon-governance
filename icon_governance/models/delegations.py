@@ -10,6 +10,7 @@ class Delegation(SQLModel, table=True):
     prep_address: Optional[str] = Field(..., primary_key=True)
     value: condecimal(max_digits=28, decimal_places=0) = Field(nullable=False)
     last_updated_block: Optional[int] = Field(None)
+    delegator: Optional[str] = Field(None, index=True)
 
     @declared_attr
     def __tablename__(cls) -> str:  # noqa: N805

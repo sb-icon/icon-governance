@@ -21,7 +21,6 @@ def run_address_stake(session):
     batch_size = 10  # number of `limits` to run
     limit = 100
 
-    # while address_index < max_addresses:
     for i in range(0, int(max_addresses / (batch_size * limit)) + 1):
         address_index = i * (batch_size * limit)
         logger.info(f"Running address index={address_index} out of {max_addresses}")
@@ -46,7 +45,11 @@ def run_address_stake(session):
                         address=addresses[i]["address"],
                         prep_address=delegation["address"],
                         value=int(delegation["value"], 16),
+                        delegator="",
                     )
+                    if addresses[i]["address"].startswith("hx"):
+                        print()
+
                     session.merge(delegation_db)
                 except IndexError:
                     logger.info(f"error indexing delegation for {d} in {addresses[i]}")

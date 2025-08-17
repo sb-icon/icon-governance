@@ -43,6 +43,7 @@ def clean_delegations(session):
                 prep_address=dr["address"],
                 value=int(dr["value"], 16),  # noqa - condecimal type
                 last_updated_block=0,
+                delegator=a,
             )
             session.merge(d)
         session.commit()

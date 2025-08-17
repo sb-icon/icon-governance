@@ -62,6 +62,7 @@ def set_delegation(session, data, address, block_height, hash):
             prep_address=d["address"],
             value=int(d["value"], 0),
             last_updated_block=block_height,
+            delegator=address,
         )
 
         session.merge(delegation)
