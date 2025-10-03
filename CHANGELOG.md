@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.10.7](https://github.com/sb-icon/icon-governance/compare/v0.10.6...v0.10.7) (2025-10-03)
+
+
+### Bug Fixes
+
+* decimal overflow issue breaking lisbon sync ([3bf4a95](https://github.com/sb-icon/icon-governance/commit/3bf4a95501451d7f2d62fae8edea422c127a559f))
+* eol base container ([7f0b35a](https://github.com/sb-icon/icon-governance/commit/7f0b35a16837634e11eb313282aeb5761e9d9ca6))
+* sync issue with count in headers ([f391765](https://github.com/sb-icon/icon-governance/commit/f391765cc7492c8430783423138f94cf85776334))
+
 ## [0.10.6](https://github.com/sb-icon/icon-governance/compare/v0.10.5...v0.10.6) (2025-02-03)
 
 
